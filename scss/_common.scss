@@ -1,0 +1,77 @@
+@use "variables" as *;
+@use "mixin" as * ;
+// ↑他のファイル呼び出してファイル全体に反映
+
+
+body{
+    color:$black;
+    // 欧文書体から書かないと日本語書体で英語が読み込まれちゃう
+    font-family: $caslon,$serif,$sans,'serif';
+
+}
+
+h2{
+    font-size: 36px;
+}
+
+h3{
+    font-size: 28px;
+}
+
+h4{
+    font-size: 16px;
+}
+
+p{
+    font-size: 16px;
+}
+
+span{
+    display: inline-block;
+    font-size: 14px;
+}
+
+li{
+    list-style: none;
+}
+
+.pc-none{
+    display: none;
+}
+
+@include mq(sp){
+    body{
+        color:$black;
+        // 欧文書体から書かないと日本語書体で英語が読み込まれちゃう
+        font-family: $caslon,$serif,$sans,'serif';
+    
+    }
+    
+    h2{
+        font-size: 24px;
+    }
+    
+    h3{
+        font-size: 20px;
+    }
+    
+    h4{
+        font-size: 14px;
+    }
+    
+    p{
+        font-size: 14px;
+    }
+    
+    span{
+        font-size: 12px;
+    }
+    
+    .mobile-none{
+        display: none;
+    }
+
+    .pc-none{
+        display: block;
+    }
+}
